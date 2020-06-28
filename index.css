@@ -1,0 +1,76 @@
+.bind{
+  position:absolute;
+  color:red;
+  margin: 5px;
+}
+li{
+	list-style-type: none;
+}
+#userPic{
+	width: 30px;
+	border-radius: 40px;
+}
+#searchbar{
+	padding-left: 12%;
+}
+#addproj{
+	background-color: rgb(60,179,113);
+}
+.navright{
+	padding-left: 35px;
+}
+.drawerhead{
+	margin-top: 60px;
+}
+#picextend{
+	width: 75px;
+	height: 75px;
+	border-radius: 40px;
+}
+#drawer{
+	background-color: rgb(60,179,113);
+	color: white;
+	display: none;
+	margin-left: 10px;
+}
+#draw{
+	display: inline-block;
+}
+#view1,#view2{
+	background-color: rgb(223, 223, 232);
+	cursor: pointer;
+}.viewlayout{
+	max-width: 100%;
+	overflow-x: hidden;
+}
+.sort{
+	float: right;
+}
+.side-headers{
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+}.cardlayout{
+	display: inline-flex;
+}
+.card{
+	position: relative;
+	width: 300px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 200px;
+}
+.status{
+	margin:20px;
+}
+.icon{
+	margin:2px;
+	margin-top: 30px;
+	font-size: 28px;
+	padding-bottom: 40px;
+}
+.icon:hover{
+	background-color: black;
+	opacity: 0.5;
+	cursor: pointer;
+}
