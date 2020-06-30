@@ -1,0 +1,46 @@
+
+.addicon{padding: 50px;padding-bottom: 0px;font-size: 80px; padding-right: 40px;}
+.addlabel{ position: relative; margin: 0px; padding-bottom: 50px;}
+.base{text-align: center;}
+
+.hr1{
+    padding: 0px;
+    margin: 0px;
+}
+.view{
+	display: grid;
+}
+.viewlayout,.viewlayout1{
+	margin: 0px;
+	padding: 0px;
+	max-width: 100%;
+	overflow-y: hidden;
+}
+.status{
+	margin:20px;
+}
+.cardlayout{
+	display: inline-flex;
+	margin: 0px;
+	padding: 0px;
+}
+.card{
+	position:relative;
+    width: 250px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: white;
+}
+
+.expireF{
+	background-color: #f7d7d5;
+	color: 	#f6867d;
+}
+.expireS{
+	background-color: #defbf9;
+	color: #83bab6;
+}
+.hr2{
+	padding: 1px;
+	margin: 1px;
+}

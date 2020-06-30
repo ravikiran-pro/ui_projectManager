@@ -1,81 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<title>project manager</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="index.js"></script>
-<link rel="stylesheet" type="text/css" href="index.css">
+    <title>Project_manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="cards.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="#" class="navbar-brand"><span class="fa fa-bars" onclick="hider()"></span></a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" onclick="navchanger()">
-            <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="nav navbar-nav" id="searchbar">
-                  <li class="active col-3"><a><i class="bind fa fa-search"></i>
-                  <input type="text" name="search" placeholder="search projects" style="padding-left: 20px;" /></a></li>
-                </div>
-
-                <div class="nav navbar-nav navbar-nav ml-auto">
-                    <a class="navright"><input type="button" id="addproj" value="New Project"/></a>
-                    <a class="navright"><span class="fa fa-bell"></span></a>
-                    <a class="navright"><img id="userPic" src="user.png"></a>
-                <div>
+        <div class="container-fluid">
+        <div class="nav">
+            <div class="nav-right">
+                <span class="fa fa-bell-o bell" aria-hidden="true"><sup class="pow">2</sup></span>&nbsp
+                <img id="userPic" src="user.png">   
+            </div>
+            <input class="nav-right newproj" type="button" id="addproj" value="New Project"/>
+            <div>
+                
+                <i class="bind fa fa-search"></i>
+                <input type="text" class="search" placeholder="search for projects and tasks"/>
+                <label class="title" onclick="drawController()">&nbsp</label>
+            </div>
         </div>
-    </nav>
-
-    <!-- layout -->
         <div class="row">
-            <!-- Drawer -->
-            <div id="drawer" class="col-sm-3">
-                    <div class="drawerhead row">
-                        <div class="col-5">
-                            <img id="picextend" src="user.png">
-                        </div>
-                        <div style="padding: 10px">
-                            <li style="font-size: 28px"><b>Airbnb</b></li>
-                            <li>Admin</li>
+        <div id="drawer">   
+                    <div class="drawerhead">
+                        <img id="picextend" src="user.png">
+                        <div style="padding: 10px;">
+                            <b>Airbnb</b>
+                            <li>Administrator</li>
                         </div>
                     </div>
                     <li class="icon"><i class="fa fa-home">&nbsp</i> Home</li>
-                    <li class="icon"><i class="fa fa-tasks">&nbsp</i> Projects</li>
-                    <li class="icon"><i class="fa fa-sticky-note-o">&nbsp</i> Notes</li>
-                    <li class="icon"><i class="fa fa-user-circle-o">&nbsp</i> Members</li>
-                    <li class="icon"><i class="fa fa-user">&nbsp</i> Teams</li>
+                    <li class="icon"><i class="fa fa-folder-open-o">&nbsp</i> Projects</li>
+                    <li class="icon"><i class="fa fa-pencil-square-o">&nbsp</i> Notes</li>
+                    <li class="icon"><i class="fa fa-user-o">&nbsp</i> Members</li>
+                    <li class="icon"><i class="fa fa-users">&nbsp</i> Teams</li>
+                    <li class="icon"><i class="fa fa-question-circle-o">&nbsp</i>Help & support</li>
                     <li class="icon"><i class="fa fa-gears">&nbsp</i> Settings</li>
-            </div>
+        </div>
+        <div class="layout">
+            <div class="custom">
+                <button type="button"  class="btn dropdown-toggle drpdwn-btn" data-toggle="dropdown">
+                All projects
+                <span class="caret"></span></button>
+                <i class="fa fa-th-large sort" style="font-size: 28px; float: right;"></i></div>
 
-            <div class="col-sm">
-                <div class="status">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example</button>
-                    <i class="fa fa-th-large sort" style="font-size: 40px;"></i>
+            <div class="view">
+                <div class="custom1">
+                    <h4 class="card-type" style="float: left;"><b>Projects in-setup</b></h4>
+                    <button type="button"  class="btn dropdown-toggle drpdwn-btn1" data-toggle="dropdown" style="float: right;">
+                    All projects
+                    <span class="caret"></span></button>
                 </div>
-                <div id="view1">
-                    <label class="side-headers">Projects</label>
-                    <button class="sort btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example</button>
                 <div class="viewlayout">
                     <div class="status">
                     <div class="cardlayout">
-                        <div class="card" onclick="alert('add Project pressed')">
-                            <i class="create fa fa-plus-circle"></i>
-                            <p style="text-align: center;">Add Project</p></div>
-                    <script type="text/javascript">
-                        draft_projects();
-                    </script>
+                        <div class="base card" onclick="alert('add Project pressed')">
+                            <i class="addicon fa fa-plus-circle" style="color:rgb(236, 239, 241);"></i>
+                            <p class="addlabel">Add project</p  >
+                        </div>
+                        <script type="text/javascript">
+                            draft_projects();
+                        </script>
                     </div>
                     </div>
                 </div>
             </div>
-                <div id="view2">
-                    <label class="side-headers">Projects</label>
-                    <button class="sort btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example</button>
+
+            <div class="view">
+                <div class="custom1">
+                    <h4 class="card-type" style="float: left;"><b>Projects</b></h4>
+                    <button type="button"  class="btn dropdown-toggle drpdwn-btn1" data-toggle="dropdown" style="float: right;">
+                    <b>All projects</b>
+                    <span class="caret"></span></button>
+                </div>
                 <div class="viewlayout">
                     <div class="status">
                     <div class="cardlayout">
@@ -85,18 +87,46 @@
                     </div>
                     </div>
                 </div>
-                    <script type="text/javascript">
-                        document.getElementById("view1").addEventListener("dragstart", scrollStartV1);
-
-                        document.getElementById("view1").addEventListener("dragend", scrollStopV1);
-
-                        document.getElementById("view2").addEventListener("dragstart", scrollStartV2);
-                        document.getElementById("view2").addEventListener("dragend", scrollStopV2);
-                    </script>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -3,7 +3,7 @@
   {
     "project":"Market analysis for wal..",
     "started":"Mar 04th 19",
-    "expiry":"5",
+    "expiry":5,
     "planned":"Mar 1th 19",
     "handler":"you",
     "status":"Approval pending"
@@ -11,7 +11,7 @@
   {
     "project":"Swot Analysis",
     "started":"Mar 12th 19",
-    "expiry":"30",
+    "expiry":30,
     "planned":"apr 1st 19",
     "handler":"kumaravle",
     "status":"Approval pending"
@@ -19,7 +19,7 @@
   {
     "project":"High sales plane",
     "started":"Apr 1st 19",
-    "expiry":"18",
+    "expiry":18,
     "planned":"apr 24th 19",
     "handler":"arvesh Ramu",
     "status":"Not submitted"
@@ -27,7 +27,7 @@
   {
     "project":"sample analysis",
     "started":"Mar 09th 19",
-    "expiry":"50",
+    "expiry":50,
     "planned":"Aug 1th 19",
     "handler":"saravanan",
     "status":"Approval pending"
@@ -35,7 +35,7 @@
   {
     "project":"Swot Analysis",
     "started":"Mar 12th 19",
-    "expiry":"30",
+    "expiry":30,
     "planned":"apr 1st 19",
     "handler":"kumaravle",
     "status":"Approval pending"
@@ -43,7 +43,7 @@
   {
     "project":"sales meet",
     "started":"Apr 1st 29",
-    "expiry":"4",
+    "expiry":4,
     "planned":"May 24th 19",
     "handler":"Kiran",
     "status":"Not submitted"
